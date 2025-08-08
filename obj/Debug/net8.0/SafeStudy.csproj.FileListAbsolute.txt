@@ -28,3 +28,4 @@ C:\Users\Aluno SENAI.C308-LAB3-001\Desktop\SafeStudy\obj\Debug\net8.0\refint\Saf
 C:\Users\Aluno SENAI.C308-LAB3-001\Desktop\SafeStudy\obj\Debug\net8.0\SafeStudy.pdb
 C:\Users\Aluno SENAI.C308-LAB3-001\Desktop\SafeStudy\obj\Debug\net8.0\SafeStudy.genruntimeconfig.cache
 C:\Users\Aluno SENAI.C308-LAB3-001\Desktop\SafeStudy\obj\Debug\net8.0\ref\SafeStudy.dll
+C:\Users\Aluno SENAI.C308-LAB3-001\Desktop\SafeStudy\obj\Debug\net8.0\SafeStudy.sourcelink.json

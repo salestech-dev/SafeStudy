@@ -2,26 +2,27 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h2>Login</h2>
 
-    <form asp-action="Login" method="post" class="w-50 mx-auto mt-4">
-        <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" name="Email" class="form-control" required />
+<form class="container-form">
+    <div class="container-login">
+        <div class="sep-b">
+            <h1>Login</h1>
         </div>
-        <div class="mb-3">
-            <label for="senha" class="form-label">Senha</label>
-            <input type="password" name="Senha" class="form-control" required />
+        <div class="sep-b">
+            <label for="CPF">CPF:</label>
+            <input class="cpfinput" id="CPF" type="number" placeholder="Digite seu CPF">
         </div>
-        <button type="submit" class="btn btn-primary">Entrar</button>
-    </form>
-
-    @if (ViewBag.Erro != null)
-    {
-        <div class="alert alert-danger mt-3 w-50 mx-auto">
-            @ViewBag.Erro
+        <div class="sep-b">
+            <label for="SENHA">SENHA:</label>
+            <input id="SENHA" class="senhainput" type="password" placeholder="Digite sua Senha">
         </div>
-    }
-
-</div>
+        <div class="sep-b">
+            <button class="login-button">
+                Entrar
+            </button>
+        </div>
+        <div class="sep-b">
+            <a href="#">"Esqueci a Senha"?</a>
+        </div>
+    </div>
+</form>
