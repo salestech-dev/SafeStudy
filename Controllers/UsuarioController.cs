@@ -13,15 +13,11 @@ public class UsuarioController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Ranking()
     {
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
 
     public IActionResult Login()
     {

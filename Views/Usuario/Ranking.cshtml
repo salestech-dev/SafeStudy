@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Ranking";
+}
+
+<div class="ranking-container">
+    <h2>🏆 Ranking de Usuários</h2>
+    <p>Veja quem mais estudou esta semana 🚀</p>
+
+    <table class="ranking-table">
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Usuário</th>
+                <th>Nível</th>
+                <th>Pontos</th>
+                <th>Progresso Semanal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="first-place">
+                <td>🥇 1º</td>
+                <td>João</td>
+                <td>15</td>
+                <td>120</td>
+                <td>
+                    <div class="progress">
+                        <div class="progress-bar gold" style="width: 100%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="second-place">
+                <td>🥈 2º</td>
+                <td>Maria</td>
+                <td>12</td>
+                <td>90</td>
+                <td>
+                    <div class="progress">
+                        <div class="progress-bar silver" style="width: 75%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="third-place">
+                <td>🥉 3º</td>
+                <td>Lucas</td>
+                <td>10</td>
+                <td>70</td>
+                <td>
+                    <div class="progress">
+                        <div class="progress-bar bronze" style="width: 60%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>4º</td>
+                <td>Ana</td>
+                <td>8</td>
+                <td>65</td>
+                <td>
+                    <div class="progress">
+                        <div class="progress-bar blue" style="width: 55%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>5º</td>
+                <td>Carlos</td>
+                <td>7</td>
+                <td>60</td>
+                <td>
+                    <div class="progress">
+                        <div class="progress-bar blue" style="width: 50%"></div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="ranking-actions">
+        <a href="/Estudo/Dashboard" class="btn btn-outline-primary">⬅ Voltar para Dashboard</a>
+    </div>
+</div>

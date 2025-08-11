@@ -1,0 +1,52 @@
+@{
+    ViewData["Title"] = "Relatórios";
+}
+
+<div class="report-container">
+    <h2>📊 Relatórios de Estudo</h2>
+
+    <div class="report-summary">
+        <div class="summary-card">Total estudado no mês: <strong>32h</strong></div>
+        <div class="summary-card">Pomodoros concluídos: <strong>64</strong></div>
+        <div class="summary-card">Dias consecutivos: <strong>8</strong></div>
+    </div>
+
+    <h3>Horas estudadas por dia</h3>
+    <canvas id="dailyChart"></canvas>
+
+    <h3>Distribuição por matéria</h3>
+    <canvas id="subjectChart"></canvas>
+
+    <div class="report-actions">
+        <button class="btn btn-primary">📄 Exportar PDF</button>
+        <button class="btn btn-outline-primary">📊 Exportar CSV</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Gráfico de barras
+    new Chart(document.getElementById('dailyChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+            datasets: [{
+                label: 'Horas estudadas',
+                data: [2, 3, 1.5, 0, 4, 2.5, 1],
+                backgroundColor: '#3399ff'
+            }]
+        }
+    });
+
+    // Gráfico de pizza
+    new Chart(document.getElementById('subjectChart'), {
+        type: 'pie',
+        data: {
+            labels: ['Matemática', 'Português', 'Inglês', 'Ciências'],
+            datasets: [{
+                data: [10, 7, 5, 3],
+                backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4caf50']
+            }]
+        }
+    });
+</script>

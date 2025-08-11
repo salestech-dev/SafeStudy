@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}@{
+    ViewData["Title"] = "Pomodoro";
+}
+
+<div class="pomodoro-container">
+    <h2>Pomodoro - Foco por 25 minutos</h2>
+
+    <div class="timer" id="timer">25:00</div>
+
+    <div class="pomodoro-buttons">
+        <button id="startBtn" class="btn-start">Iniciar</button>
+        <button id="resetBtn" class="btn-reset">Resetar</button>
+    </div>
+
+    <p id="statusMessage"></p>
+</div>
+
+<script>
+    let timerDisplay = document.getElementById("timer");
+    let startBtn = document.getElementById("startBtn");
+    let resetBtn = document.getElementById("resetBtn");
+    let statusMessage = document.getElementById("statusMessage");
+
+    let countdown;
+    let totalTime = 25 * 60; // 25 minutos
+    let timeLeft = totalTime;
+    let running = false;
+
+    function updateDisplay() {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        timerDisplay.textContent = 
+            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    startBtn.addEventListener("click", function () {
+        if (!running) {
+            running = true;
+            countdown = setInterval(function () {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateDisplay();
+                } else {
+                    clearInterval(countdown);
+                    statusMessage.textContent = "⏳ Tempo concluído! Faça uma pausa.";
+                    running = false;
+
+                    // Enviar para o backend registrar a sessão
+                    fetch("/Estudo/RegistrarSessao", { method: "POST" });
+                }
+            }, 1000);
+        }
+    });
+
+    resetBtn.addEventListener("click", function () {
+        clearInterval(countdown);
+        timeLeft = totalTime;
+        updateDisplay();
+        running = false;
+        statusMessage.textContent = "";
+    });
+
+    updateDisplay();
+</script>

@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard-container">
+    <!-- Cabeçalho -->
+    <div class="welcome-section">
+        <h2>Bem-vindo(a), Usuário!</h2>
+        <p>"Continue firme! Cada minuto de estudo conta 🚀"</p>
+    </div>
+
+    <!-- Cards principais -->
+    <div class="main-cards">
+        <!-- Sessão Atual -->
+        <div class="card">
+            <h3>Sessão Atual</h3>
+            <p>Você ainda não iniciou uma sessão de estudo.</p>
+            <a href="/Estudo/Pomodoro" class="btn btn-primary">Iniciar Pomodoro</a>
+        </div>
+
+        <!-- Progresso Semanal -->
+        <div class="card">
+            <h3>Progresso Semanal</h3>
+            <p>Meta: 10h semanais</p>
+            <progress value="4" max="10"></progress>
+            <p>4h de 10h concluídas</p>
+        </div>
+    </div>
+
+    <!-- Ranking e Estatísticas -->
+    <div class="bottom-section">
+        <!-- Ranking -->
+        <div class="card ranking-card">
+            <h3>Ranking</h3>
+            <ol>
+                <li>🥇 João - 120 pontos</li>
+                <li>🥈 Maria - 90 pontos</li>
+                <li>🥉 Lucas - 70 pontos</li>
+            </ol>
+            <a href="/Ranking" class="btn btn-outline-primary">Ver Ranking Completo</a>
+        </div>
+
+        <!-- Estatísticas -->
+        <div class="card stats-card">
+            <h3>Estatísticas</h3>
+            <canvas id="studyChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Chart.js para estatísticas -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('studyChart');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+            datasets: [{
+                label: 'Horas Estudadas',
+                data: [1, 2, 1.5, 0, 3, 2.5, 1],
+                backgroundColor: '#3399ff'
+            }]
+        },
+        options: { responsive: true }
+    });
+</script>

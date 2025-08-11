@@ -1,27 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "SafeStudy - Organize seu estudo";
 }
 
-<div class="container-align">
-    <div class="align-text">
-        <h1>Bem-Vindo(a) de volta Usuario!</h1>
-        <p>Pronto para mais uma sessão de foco?</p>
-    </div>
-    <div class="container-flex">
-        <div class="container-sessao-atual">
-            <h1>Sessão Atual</h1>
-            <p>Você ainda não iniciou uma sessão de estudos.</p>
-        </div>
-        <div class="container-progresso-semanal">
-            <h1>Progresso Semanal</h1>
-            <p>Em breve, gráfico com estatisticas de estudo.</p>
-            <progress></progress>
-        </div>
-    </div>
-    <div class="container-ranking">
-        <div class="ranking">
-            <h1>Ranking</h1>
-            <a href="#">Visualziar Ranking</a>
-        </div>
-    </div>
+<div class="home-hero">
+    <h1>SafeStudy</h1>
+    <p>Organize seu tempo, maximize seu aprendizado 📚</p>
+    <a href="/Usuario/Login" class="btn btn-primary">Começar Agora</a>
+</div>
+
+<div class="features-section">
+    <a asp-action="Pomodoro" asp-controller="Estudo" class="feature-card">
+        <h3>⏳ Pomodoro</h3>
+        <p>Foque por 25 minutos e aumente sua produtividade.</p>
+    </a>
+    <a asp-action="Dashboard" asp-controller="Estudo" class="feature-card">
+        <h3>📊 Dashboard</h3>
+        <p>Veja seu progresso e resultados de forma clara.</p>
+    </a>
+    <a asp-action="Ranking" asp-controller="Usuario" class="feature-card">
+        <h3>🏆 Ranking</h3>
+        <p>Compita com outros estudantes e alcance o topo.</p>
+    </a>
+    <a asp-action="Relatorio" asp-controller="Estudo" class="feature-card">
+        <h3>📈 Relatórios</h3>
+        <p>Analise sua evolução e descubra seus pontos fortes.</p>
+    </a>
 </div>

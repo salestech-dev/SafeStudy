@@ -111,14 +111,14 @@ body {
   text-decoration: underline;
 }
 
-.container-align{
+.container-align {
   gap: 100px;
 }
 
-.container-flex{
+.container-flex {
   width: 100%;
   align-items: center;
-  justify-content:space-around; 
+  justify-content: space-around;
   display: flex;
 }
 
@@ -131,13 +131,286 @@ body {
   width: 100%;
 }
 
-.align-text h1 {
+.feature-card:hover{
+  transform: scale(1.1);
+}
+
+.home-hero {
+  text-align: center;
+  padding: 80px 20px;
+  color: #0d3b66;
+  border-radius: 0 0 40px 40px;
+}
+
+.home-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.home-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  color: black;
+  text-decoration: none;
+}
+
+
+/*POMODORO STYLE*/
+
+.pomodoro-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0d3b66;
+  margin: 20px 0;
+}
+
+.pomodoro-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-start {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-reset {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-start:hover {
+  background-color: #218838;
+}
+
+.btn-reset:hover {
+  background-color: #c82333;
+}
+
+
+/* DASHBOARD STYLE */
+
+Container geral */ .dashboard-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Boas-vindas */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0d3b66;
+}
+
+/* Cards principais */
+.main-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Card base */
+.card {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Ranking e estatísticas */
+.bottom-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ranking-card {
+  flex: 1;
+}
+
+.stats-card {
+  flex: 2;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
   font-weight: bold;
 }
 
-.container-ranking{
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn-primary {
+  background-color: #3399ff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #237ad1;
+}
+
+.btn-outline-primary {
+  border: 2px solid #3399ff;
+  color: #3399ff;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3399ff;
+  color: white;
+}
+
+/* Barra de progresso */
+progress {
+  width: 100%;
+  height: 18px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e0e0e0;
+}
+
+progress::-webkit-progress-value {
+  background-color: #3399ff;
+}
+
+
+/* RANKING STYLE */
+
+/* Container geral */
+.ranking-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título */
+.ranking-container h2 {
+  color: #0d3b66;
+  margin-bottom: 10px;
+}
+
+/* Tabela */
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ranking-table th,
+.ranking-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ranking-table th {
+  background-color: #3399ff;
+  color: white;
+}
+
+.ranking-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Destaque para as 3 primeiras posições */
+.first-place {
+  background-color: rgba(255, 215, 0, 0.15);
+}
+
+.second-place {
+  background-color: rgba(192, 192, 192, 0.15);
+}
+
+.third-place {
+  background-color: rgba(205, 127, 50, 0.15);
+}
+
+/* Barra de progresso */
+.progress {
+  background-color: #e0e0e0;
+  height: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+}
+
+.progress-bar.gold {
+  background-color: gold;
+}
+
+.progress-bar.silver {
+  background-color: silver;
+}
+
+.progress-bar.bronze {
+  background-color: peru;
+}
+
+.progress-bar.blue {
+  background-color: #3399ff;
+}
+
+/* Botão de voltar */
+.ranking-actions {
+  margin-top: 20px;
+}
+
+.btn-outline-primary {
+  padding: 10px 20px;
+  border: 2px solid #3399ff;
+  color: #3399ff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3399ff;
+  color: white;
 }

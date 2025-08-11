@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Aluno SENAI.C308-LAB3-001\Desktop\SafeStudy
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Aluno SENAI.C308-LAB3-001/Desktop/SafeStudy/Views/Estudo/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRvXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aluno SENAI.C308-LAB3-001/Desktop/SafeStudy/Views/Estudo/Pomodoro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRvXFBvbW9kb3JvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aluno SENAI.C308-LAB3-001/Desktop/SafeStudy/Views/Estudo/Relatorio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRvXFJlbGF0b3Jpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Aluno SENAI.C308-LAB3-001/Desktop/SafeStudy/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Aluno SENAI.C308-LAB3-001/Desktop/SafeStudy/Views/Usuario/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aluno SENAI.C308-LAB3-001/Desktop/SafeStudy/Views/Usuario/Ranking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xSYW5raW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Aluno SENAI.C308-LAB3-001/Desktop/SafeStudy/Views/_ViewImports.cshtml]
